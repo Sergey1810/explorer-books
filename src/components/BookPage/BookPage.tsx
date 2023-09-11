@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
-import { IBook } from '../../models/IBook'
+import React from 'react'
 import { useLocation } from 'react-router-dom'
 import './BookPage.css'
 
 
-interface BookPageProps {
-    books: IBook[],
-}
-
-export const BookPage: React.FC<BookPageProps> = ({ books }) => {
-    // const [book, setBook] = useState()
+export const BookPage: React.FC = () => {
     const location = useLocation()
     let book = location.state.book
     return (

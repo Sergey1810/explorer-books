@@ -20,7 +20,7 @@ export const Book: React.FC<BookProps> = ({ book }) => {
     }
     return (
         <div className='book' onClick={handleBook}>
-            <img className='book__images' src={book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail || logo} alt={book.volumeInfo.title} />
+            <img className='book__images' src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : logo } alt={book.volumeInfo.title} />
             <span className='book__categories'>{book.volumeInfo.categories}</span>
             <h3 className='book__title'>{book.volumeInfo.title}</h3>
             <span className='book__author'>{book.volumeInfo.authors}</span>

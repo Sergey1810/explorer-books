@@ -1,38 +1,49 @@
-.bookPage{
-    padding-top: 100px;
-  display: flex;
+.bookPage {
+    padding: 70px 50px;
+    display: flex;
 }
 
-.bookPage__block-image{
+.bookPage__block-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bookPage__image{
-   width: 20vw;
-   height: 50vh;
+.bookPage__image {
+    width: 400px;
+    height: 50vh;
 }
 
-.bookPage__info{
+.bookPage__info {
     display: flex;
     flex-direction: column;
     align-items: start;
     margin-left: 25px;
 }
 
-.bookPage__categories{
+/* .bookPage__categories {}
 
+.bookPage__author {}
+
+.bookPage__title {} */
+
+.bookPage__description {
+    text-align: left;
 }
 
-.bookPage__author{
-
+@media screen and (max-width:880px) {
+    .bookPage__image {
+        width: 250px;
+        height: 30vh;
+    }
 }
 
-.bookPage__title{
-
-}
-
-.bookPage__description{
-   text-align: left;
+@media screen and (max-width:650px) {
+    .bookPage {
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+    .bookPage__info{
+        align-items: center;
+    }
 }
