@@ -1,0 +1,19 @@
+.header{
+ background-color: antiquewhite;
+}
+
+.header__title{
+    margin: 0;
+    padding-top: 25px;
+}
+
+.header__link{
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+    color: #000;
+}
+
+.header__link:hover{
+    opacity: .6;
+}

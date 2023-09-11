@@ -1,0 +1,56 @@
+.listBook{
+    padding-top: 50px;
+}
+
+.listBook__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 50px;
+    justify-items: center;
+}
+
+.listBook__button {
+    all: unset;
+    height: 37px;
+    margin-top: 25px;
+    border-radius: 3px;
+    background: #3c1ffd;
+    color: #ffffff;
+    padding: 0 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.3s linear;
+}
+
+.listBook__button:hover{
+    opacity: 0.8;
+}
+
+.listBook__totalItem{
+    margin-top: 50px;
+}
+
+.listBook__error{
+    font-size: 24px;
+    text-align: center;
+    color: red;
+}
+
+@media screen and (max-width:880px){
+    .listBook{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:660px){
+    .listBook{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:360px){
+    .listBook{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

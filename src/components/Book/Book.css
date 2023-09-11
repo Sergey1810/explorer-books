@@ -1,0 +1,36 @@
+.book{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-height: 400px;
+    max-width: 250px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #817e7e;
+    padding: 5px;
+}
+
+.book__images{
+    height: 200px;
+    width: 200px;
+}
+
+.book__categories{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.book__title{
+    font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.book__author{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}

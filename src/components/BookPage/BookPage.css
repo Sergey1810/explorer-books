@@ -1,0 +1,38 @@
+.bookPage{
+    padding-top: 100px;
+  display: flex;
+}
+
+.bookPage__block-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookPage__image{
+   width: 20vw;
+   height: 50vh;
+}
+
+.bookPage__info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 25px;
+}
+
+.bookPage__categories{
+
+}
+
+.bookPage__author{
+
+}
+
+.bookPage__title{
+
+}
+
+.bookPage__description{
+   text-align: left;
+}
