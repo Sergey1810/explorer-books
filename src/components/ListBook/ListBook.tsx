@@ -15,9 +15,10 @@ export const ListBook: React.FC<ListBookProps> = ({ books, moreHandler, error, t
         <section className='listBook'>
             <span className='listBook__totalItem'>{totalItems ? `found ${totalItems} result` : ''}</span>
             <div className='listBook__grid'>
-                {error ? <span className='listBook__error'>error</span> : books.map(book => <Book key={book.id} book={book} />)}
+                {error && <span className='listBook__error'>error</span>}
+                {(totalItems > 0) && books.map((book, index) => <Book key={index} book={book} />)}
             </div>
-            {books.length > 0 && <button className='listBook__button' onClick={moreHandler}>load more</button>}
+            {(totalItems > 0) && books.length > 0 && <button className='listBook__button' onClick={moreHandler}>load more</button>}
         </section>
     )
 }

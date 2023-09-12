@@ -11,6 +11,6 @@ export interface IBook{
             smallThumbnail:string
         },
         description:string,
-        categories:[string]
+        categories:[]
     }
 }

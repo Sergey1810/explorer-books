@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from './components/Header/Header';
 import './App.css';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
@@ -26,26 +26,33 @@ function App() {
     const num = more + 30
     setMore(more + 30)
     dispatch(fetchBooks(search?.categories || '', search?.sort || '', search?.search || '', String(num)))
-    setMassive([...massive || books.items, ...books.items])
-    console.log(books)
+    setMassive([...massive || [], ...books.items])
+  }
+
+  const updateMassive = () =>{
+    setMassive([...massive || [], ...books.items])
   }
 
   const selectHandler = (categories: string, sort: string, search: string) => {
+    dispatch(fetchBooks(categories, sort, search, String(0)))
+    updateMassive()
     setSearch({
       categories: categories,
       sort: sort,
       search: search
     })
-    dispatch(fetchBooks(categories, sort, search, String(0)))
-    setMassive(books.items)
   }
+
+  useEffect(() => {
+    updateMassive()
+  }, [books])
 
   return (
     <div className="App">
       <Header selectedHandler={selectHandler} />
       {isLoading && <Preloader />}
       <Routes>
-        <Route path='/' element={<ListBook moreHandler={moreHandler} books={massive || books.items} totalItems={books.totalItems} error={error} />} />
+        <Route path='/' element={<ListBook moreHandler={moreHandler} books={massive || []} totalItems={books.totalItems} error={error} />} />
         <Route path='/book' element={<BookPage />} />
       </Routes>
     </div>

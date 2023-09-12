@@ -11,24 +11,7 @@ const initialState: BookState = {
     books: {
         kind: '',
         totalItems: 0,
-        items: [
-            {
-                id: '',
-                selfLink: '',
-                volumeInfo: {
-                    id:'',
-                    title: '',
-                    authors: [],
-                    previewLink: '',
-                    imageLinks:{
-                        thumbnail:'',
-                        smallThumbnail:''
-                    },
-                    description:'',
-                    categories:['']
-                }
-            }
-        ]
+        items: []
     },
     isLoading: false,
     error: ''
